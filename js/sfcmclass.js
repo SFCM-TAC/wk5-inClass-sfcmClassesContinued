@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", renderClasses);
 /* Search/Filtering Logic */
 function handleSearchInput(event) {
   console.log("Emily");
+  console.log("Banana Cream Pies")
+  console.log(event.target.value);
   // TODO: do something with matching elements!
 }
 document.addEventListener("DOMContentLoaded", function() {
