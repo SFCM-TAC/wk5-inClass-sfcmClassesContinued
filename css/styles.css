@@ -13,3 +13,7 @@
 .classInfo {
   font-weight: bold;
 }
+
+.highlighted {
+  background-color: yellow;
+}

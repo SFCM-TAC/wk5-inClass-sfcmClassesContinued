@@ -95,11 +95,20 @@ document.addEventListener("DOMContentLoaded", renderClasses);
 
 /* Search/Filtering Logic */
 function handleSearchInput(event) {
-  console.log("Emily");
-  console.log("Banana Cream Pies")
-  console.log(event.target.value);
-  // TODO: do something with matching elements!
+  var search = event.target.value;
+  var students = document.querySelectorAll('.classStudent');
+
+  for (i = 0; i < students.length; i++) {
+    var currentStudentNode = students[i];
+    var studentName = currentStudentNode.innerHTML;
+    if (studentName.startsWith(search)) {
+      currentStudentNode.setAttribute('class', 'classStudent highlighted');
+    } else {
+      currentStudentNode.setAttribute('class', 'classStudent');
+    }
+  }
 }
+
 document.addEventListener("DOMContentLoaded", function() {
   // attaches the handleSearchInput to the search box
   // so that when it changes, we can do something with its value
